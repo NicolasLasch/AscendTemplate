@@ -1,0 +1,10 @@
+modLoader = "javafml"
+loaderVersion = "[36,)"
+license = "MIT"
+[[mods]]
+modId = "template"
+version = "1.0"
+displayName = "Template Mod"
+description = "Template Mod for ascend Dev Team"
+
+authors = ["ascend"]
