@@ -1,46 +1,41 @@
+Template téléchargable pour setup directement l'environement pour programmer un mod pour Ascend.
 
-Source installation information for modders
--------------------------------------------
-This code follows the Minecraft Forge installation methodology. It will apply
-some small patches to the vanilla MCP source code, giving you and it access 
-to some of the data and functions you need to build a successful mod.
+Informations sur l'installation des sources pour les moddeurs
+==============================
+Ce code suit la méthodologie d'installation de Minecraft Forge. Il appliquera
+quelques petits correctifs au code source vanille de MCP, vous donnant accès à certaines données et fonctions dont vous avez besoin pour construire un mod réussi.
+à certaines des données et fonctions dont vous avez besoin pour construire un mod réussi.
 
-Note also that the patches are built against "un-renamed" MCP source code (aka
-SRG Names) - this means that you will not be able to read them directly against
-normal code.
+Notez également que les correctifs sont construits à partir du code source MCP "non renommé" (aka
+SRG Names) - ce qui signifie que vous ne pourrez pas les lire directement avec du
+code normal.
 
-Setup Process:
+Processus d'installation :
 ==============================
 
-Step 1: Open your command-line and browse to the folder where you extracted the zip file.
+Etape 1 : Ouvrez votre ligne de commande et naviguez jusqu'au dossier où vous avez extrait le fichier zip.
 
-Step 2: You're left with a choice.
-If you prefer to use Eclipse:
-1. Run the following command: `gradlew genEclipseRuns` (`./gradlew genEclipseRuns` if you are on Mac/Linux)
-2. Open Eclipse, Import > Existing Gradle Project > Select Folder 
-   or run `gradlew eclipse` to generate the project.
+Étape 2 : Vous avez le choix.
+1. Ouvrez IDEA, et importez le projet.
+2. Sélectionner votre fichier build.gradle et le faire importer.
+3. Exécuter la commande suivante : `gradlew genIntellijRuns` (`./gradlew genIntellijRuns` si vous êtes sur Mac/Linux)
+4. Rafraîchir le projet Gradle dans IDEA si nécessaire.
 
-If you prefer to use IntelliJ:
-1. Open IDEA, and import project.
-2. Select your build.gradle file and have it import.
-3. Run the following command: `gradlew genIntellijRuns` (`./gradlew genIntellijRuns` if you are on Mac/Linux)
-4. Refresh the Gradle Project in IDEA if required.
+Si à un moment donné il vous manque des librairies dans votre IDE, ou si vous rencontrez des problèmes, vous pouvez
+lancer `gradlew --refresh-dependencies` pour rafraîchir le cache local. `gradlew clean` pour tout remettre à zéro
+{cela n'affecte pas votre code} et recommencer le processus.
 
-If at any point you are missing libraries in your IDE, or you've run into problems you can 
-run `gradlew --refresh-dependencies` to refresh the local cache. `gradlew clean` to reset everything 
-{this does not affect your code} and then start the process again.
-
-Mapping Names:
+Noms de mappage :
 =============================
-By default, the MDK is configured to use the official mapping names from Mojang for methods and fields 
-in the Minecraft codebase. These names are covered by a specific license. All modders should be aware of this
-license, if you do not agree with it you can change your mapping names to other crowdsourced names in your 
-build.gradle. For the latest license text, refer to the mapping file itself, or the reference copy here:
+Par défaut, le MDK est configuré pour utiliser les noms de mapping officiels de Mojang pour les méthodes et les champs
+dans la base de code Minecraft. Ces noms sont couverts par une licence spécifique. Tous les moddeurs doivent connaître cette licence.
+Si vous n'êtes pas d'accord avec cette licence, vous pouvez changer vos noms de mapping pour d'autres noms crowdsourcés dans votre fichier
+build.gradle. Pour le texte de la licence le plus récent, référez-vous au fichier de mapping lui-même, ou à la copie de référence ici :
 https://github.com/MinecraftForge/MCPConfig/blob/master/Mojang.md
 
-Additional Resources: 
+Ressources supplémentaires :
 =========================
-Community Documentation: http://mcforge.readthedocs.io/en/latest/gettingstarted/  
-LexManos' Install Video: https://www.youtube.com/watch?v=8VEdtQLuLO0  
-Forge Forum: https://forums.minecraftforge.net/  
-Forge Discord: https://discord.gg/UvedJ9m  
+Documentation de la communauté : http://mcforge.readthedocs.io/en/latest/gettingstarted/
+Vidéo d'installation de LexManos : https://www.youtube.com/watch?v=8VEdtQLuLO0
+Forum de la Forge : https://forums.minecraftforge.net/
+Forge Discord : https://discord.gg/UvedJ9m
